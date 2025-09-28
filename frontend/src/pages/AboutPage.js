@@ -125,7 +125,7 @@ const AboutPage = () => {
               <div className="w-24 h-1 bg-gold mb-8"></div>
               
               <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                {about.story}
+                {aboutData.story}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
