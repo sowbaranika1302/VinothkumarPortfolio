@@ -177,6 +177,7 @@ const ResearchPage = () => {
           </div>
         </div>
       </section>
+      )}
 
       {/* Innovation Areas */}
       <section className="py-20 bg-gray-50">
