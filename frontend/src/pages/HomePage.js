@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Award, Zap } from 'lucide-react';
-import { portfolioData } from '../data/mock';
+import { portfolioAPI } from '../services/api';
 
 const HomePage = () => {
   const { hero, projects, testimonials } = portfolioData;
