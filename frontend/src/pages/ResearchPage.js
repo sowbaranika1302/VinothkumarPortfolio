@@ -4,7 +4,27 @@ import { ExternalLink, Users, Award, BookOpen, Microscope, Lightbulb, TrendingUp
 import { portfolioAPI } from '../services/api';
 
 const ResearchPage = () => {
-  const { research } = portfolioData;
+  const [research, setResearch] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchResearchData = async () => {
+      try {
+        setLoading(true);
+        const data = await portfolioAPI.getResearchProjects();
+        setResearch(data.research || []);
+        setError(null);
+      } catch (err) {
+        console.error('Error fetching research data:', err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchResearchData();
+  }, []);
 
   const publications = [
     {
