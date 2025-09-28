@@ -35,16 +35,26 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-gold">Quick Links</h4>
             <ul className="space-y-2">
-              {portfolioData.navigation.slice(0, 4).map((item) => (
-                <li key={item.path}>
-                  <Link
-                    to={item.path}
-                    className="text-gray-300 hover:text-gold transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/" className="text-gray-300 hover:text-gold transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-gray-300 hover:text-gold transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/portfolio" className="text-gray-300 hover:text-gold transition-colors">
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-300 hover:text-gold transition-colors">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
