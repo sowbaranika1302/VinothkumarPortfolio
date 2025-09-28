@@ -103,7 +103,7 @@ const AboutPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aboutData.competencies.map((competency, index) => {
+            {about.competencies.map((competency, index) => {
               const IconComponent = iconMap[competency.icon];
               return (
                 <div key={index} className="text-center p-8 bg-gray-50 rounded-2xl hover:bg-gold/10 hover:shadow-lg transition-all duration-300 group">
