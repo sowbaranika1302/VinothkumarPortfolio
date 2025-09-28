@@ -1,4 +1,5 @@
 import axios from 'axios';
+import React from 'react';
 
 // Get backend URL from environment
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
