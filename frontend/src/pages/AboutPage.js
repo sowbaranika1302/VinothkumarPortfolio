@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Download, ExternalLink, MapPin, Calendar } from 'lucide-react';
-import { portfolioAPI } from '../services/api';
+import { staticPortfolioData } from '../data/staticData';
 
 // Dynamic icon mapping for competencies
 const iconMap = {
