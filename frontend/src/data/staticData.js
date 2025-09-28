@@ -64,7 +64,7 @@ export const staticPortfolioData = {
     ]
   },
 
-  // Portfolio Projects
+  // Portfolio Projects - Complete 23+ Project Portfolio
   projects: [
     {
       id: "1",
@@ -186,6 +186,234 @@ export const staticPortfolioData = {
         "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&h=600&fit=crop"
       ]
+    },
+    {
+      id: "6",
+      title: "Circular Fashion Strategy Implementation",
+      category: "Collections",
+      company: "Independent Consulting",
+      image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&h=600&fit=crop",
+      description: "Comprehensive circular design strategy for emerging fashion brands.",
+      tools: ["Design Thinking", "Sustainability Analysis", "Supply Chain Management"],
+      impact: "Enabled 5 brands to adopt circular fashion principles",
+      duration: "4 months",
+      role: "Lead Consultant"
+    },
+    {
+      id: "7",
+      title: "Smart Textile Development",
+      category: "3D Design",
+      company: "Kent State Innovation Lab",
+      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+      description: "Integration of IoT sensors into textile structures for wearable technology.",
+      tools: ["IoT Integration", "Textile Engineering", "Arduino"],
+      impact: "Prototype for next-generation smart fabrics",
+      duration: "10 months",
+      role: "Research Designer"
+    },
+    {
+      id: "8",
+      title: "Sustainable Denim Innovation",
+      category: "Collections",
+      company: "Collaborative Project",
+      image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&h=600&fit=crop",
+      description: "Revolutionary approach to denim production using eco-friendly processes.",
+      tools: ["Sustainable Chemistry", "Process Design", "Quality Testing"],
+      impact: "90% reduction in water usage during production",
+      duration: "8 months",
+      role: "Innovation Lead"
+    },
+    {
+      id: "9",
+      title: "AI-Powered Design Tools",
+      category: "Research",
+      company: "Mad Street Den",
+      image: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=600&fit=crop",
+      description: "Machine learning algorithms for automated pattern generation and design assistance.",
+      tools: ["Python", "TensorFlow", "Design Automation"],
+      impact: "50% reduction in design iteration time",
+      duration: "12 months",
+      role: "AI Research Lead"
+    },
+    {
+      id: "10",
+      title: "Eco-Friendly Accessories Collection",
+      category: "Accessories",
+      company: "Green Fashion Initiative",
+      image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&h=600&fit=crop",
+      description: "Comprehensive accessories line using only recycled and biodegradable materials.",
+      tools: ["Material Research", "Sustainable Design", "Life Cycle Analysis"],
+      impact: "100% biodegradable product line",
+      duration: "6 months",
+      role: "Creative Director"
+    },
+    {
+      id: "11",
+      title: "Zero-Waste Pattern Making",
+      category: "Surface Development",
+      company: "Sustainable Design Lab",
+      image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&h=600&fit=crop",
+      description: "Revolutionary pattern-making techniques that eliminate textile waste.",
+      tools: ["CAD Design", "Pattern Engineering", "Waste Analysis"],
+      impact: "Zero textile waste in production process",
+      duration: "5 months",
+      role: "Innovation Designer"
+    },
+    {
+      id: "12",
+      title: "Digital Fashion Showroom",
+      category: "3D Design",
+      company: "Fashion Tech Startup",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+      description: "Virtual reality platform for immersive fashion presentations and sales.",
+      tools: ["VR Development", "3D Modeling", "Unity"],
+      impact: "30% increase in virtual sales engagement",
+      duration: "14 months",
+      role: "Technical Creative Director"
+    },
+    {
+      id: "13",
+      title: "Organic Cotton Supply Chain",
+      category: "Collections",
+      company: "Ethical Fashion Collective",
+      image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=600&fit=crop",
+      description: "End-to-end organic cotton supply chain development for small-scale farmers.",
+      tools: ["Supply Chain Management", "Farmer Training", "Quality Control"],
+      impact: "Supporting 200+ organic cotton farmers",
+      duration: "18 months",
+      role: "Supply Chain Designer"
+    },
+    {
+      id: "14",
+      title: "Recycled Material Innovation",
+      category: "Research",
+      company: "Materials Lab",
+      image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=600&fit=crop",
+      description: "Development of new textile materials from post-consumer plastic waste.",
+      tools: ["Material Science", "Recycling Technology", "Quality Testing"],
+      impact: "New material with 80% recycled content",
+      duration: "12 months",
+      role: "Materials Research Lead"
+    },
+    {
+      id: "15",
+      title: "Fashion Tech Integration Platform",
+      category: "Research",
+      company: "Tech Innovation Hub",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
+      description: "Integration platform connecting fashion designers with emerging technologies.",
+      tools: ["API Development", "Cloud Architecture", "User Experience Design"],
+      impact: "Connected 500+ designers with tech solutions",
+      duration: "16 months",
+      role: "Platform Architect"
+    },
+    {
+      id: "16",
+      title: "Sustainable Uniform Design",
+      category: "Collections",
+      company: "Corporate Clients",
+      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+      description: "Professional uniform collections for hospitality and corporate sectors.",
+      tools: ["Professional Design", "Durability Testing", "Brand Integration"],
+      impact: "Uniforms for 10+ major hospitality brands",
+      duration: "8 months",
+      role: "Lead Uniform Designer"
+    },
+    {
+      id: "17",
+      title: "Ethical Production Methods Study",
+      category: "Research",
+      company: "Fashion Ethics Institute",
+      image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&h=600&fit=crop",
+      description: "Comprehensive study of ethical production methods in global fashion supply chains.",
+      tools: ["Field Research", "Data Analysis", "Report Writing"],
+      impact: "Policy recommendations adopted by 3 major brands",
+      duration: "10 months",
+      role: "Lead Researcher"
+    },
+    {
+      id: "18",
+      title: "Climate-Conscious Design Framework",
+      category: "Surface Development",
+      company: "Climate Fashion Initiative",
+      image: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=600&fit=crop",
+      description: "Design framework integrating climate impact considerations into fashion design process.",
+      tools: ["Climate Analysis", "Design Methodology", "Impact Assessment"],
+      impact: "Framework adopted by 15+ fashion schools",
+      duration: "7 months",
+      role: "Framework Developer"
+    },
+    {
+      id: "19",
+      title: "Biomaterial Fashion Research",
+      category: "Research",
+      company: "Bio-Innovation Lab",
+      image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=800&h=600&fit=crop",
+      description: "Research into bio-based materials for fashion applications including lab-grown fabrics.",
+      tools: ["Biotechnology", "Material Testing", "Lab Research"],
+      impact: "3 new bio-materials ready for commercialization",
+      duration: "15 months",
+      role: "Bio-Materials Researcher"
+    },
+    {
+      id: "20",
+      title: "Fashion Sustainability Audit System",
+      category: "Research",
+      company: "Sustainability Consultancy",
+      image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&h=600&fit=crop",
+      description: "Comprehensive audit system for measuring and improving fashion brand sustainability.",
+      tools: ["Audit Framework", "Data Analytics", "Sustainability Metrics"],
+      impact: "Audited 25+ fashion brands for sustainability compliance",
+      duration: "11 months",
+      role: "Lead Sustainability Auditor"
+    },
+    {
+      id: "21",
+      title: "Upcycling Innovation Workshop Series",
+      category: "Collections",
+      company: "Community Initiative",
+      image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&h=600&fit=crop",
+      description: "Community workshops teaching upcycling techniques and sustainable fashion practices.",
+      tools: ["Workshop Design", "Community Engagement", "Skill Development"],
+      impact: "Trained 300+ individuals in upcycling techniques",
+      duration: "6 months",
+      role: "Workshop Lead & Educator"
+    },
+    {
+      id: "22",
+      title: "Green Manufacturing Process Design",
+      category: "Surface Development",
+      company: "Manufacturing Innovation Lab",
+      image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&h=600&fit=crop",
+      description: "Design of environmentally-friendly manufacturing processes for textile production.",
+      tools: ["Process Engineering", "Environmental Analysis", "Efficiency Optimization"],
+      impact: "40% reduction in manufacturing environmental impact",
+      duration: "9 months",
+      role: "Process Design Lead"
+    },
+    {
+      id: "23",
+      title: "Conscious Consumer Education Platform",
+      category: "Research",
+      company: "Fashion Education Initiative",
+      image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&h=600&fit=crop",
+      description: "Digital platform educating consumers about sustainable fashion choices and practices.",
+      tools: ["Educational Design", "Platform Development", "Content Creation"],
+      impact: "Reached 10,000+ consumers with sustainability education",
+      duration: "8 months",
+      role: "Education Platform Designer"
+    },
+    {
+      id: "24",
+      title: "Artisan Collaboration Collection",
+      category: "Collections",
+      company: "Artisan Partnership",
+      image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=600&fit=crop",
+      description: "Fashion collection created in collaboration with traditional artisans to preserve cultural techniques.",
+      tools: ["Cultural Research", "Artisan Training", "Traditional Techniques"],
+      impact: "Supported 50+ traditional artisans with fair wages",
+      duration: "12 months",
+      role: "Cultural Collaboration Designer"
     }
   ],
 
