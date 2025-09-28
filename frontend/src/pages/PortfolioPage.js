@@ -26,7 +26,7 @@ const PortfolioPage = () => {
             </h1>
             <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-              A comprehensive showcase of {allProjects.length} projects spanning sustainable fashion, 
+              A comprehensive showcase of {projects.length} projects spanning sustainable fashion, 
               research innovation, and technology integration across global brands and institutions.
             </p>
 
