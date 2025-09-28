@@ -6,67 +6,14 @@ import { staticPortfolioData, categories } from '../data/staticData';
 const PortfolioPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const [allProjects, setAllProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        setLoading(true);
-        const projectsData = await portfolioAPI.getProjects(selectedCategory);
-        setAllProjects(projectsData.projects || []);
-        setError(null);
-      } catch (err) {
-        console.error('Error fetching projects:', err);
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProjects();
-  }, [selectedCategory]);
-
-  const filteredProjects = allProjects;
-
-  if (loading) {
-    return (
-      <div className="min-h-screen pt-20">
-        {/* Header */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-6">
-              My <span className="text-gold">Portfolio</span>
-            </h1>
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gold mx-auto mb-4"></div>
-            <p className="text-gray-600">Loading projects...</p>
-          </div>
-        </section>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="min-h-screen pt-20">
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-6">
-              My <span className="text-gold">Portfolio</span>
-            </h1>
-            <p className="text-red-600 mb-4">Error loading projects: {error}</p>
-            <button 
-              onClick={() => window.location.reload()}
-              className="btn-primary"
-            >
-              Try Again
-            </button>
-          </div>
-        </section>
-      </div>
-    );
-  }
+  const { projects } = staticPortfolioData;
+  
+  const filteredProjects = selectedCategory === 'all' 
+    ? projects 
+    : projects.filter(project => 
+        project.category.toLowerCase().replace(' ', '-') === selectedCategory
+      );
 
   return (
     <div className="min-h-screen pt-20">
