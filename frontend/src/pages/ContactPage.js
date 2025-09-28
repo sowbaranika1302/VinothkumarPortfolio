@@ -123,6 +123,19 @@ const ContactPage = () => {
               <h2 className="text-3xl font-bold text-charcoal mb-8">
                 Start a Conversation
               </h2>
+              
+              <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-xl">
+                <p className="text-blue-800 text-sm">
+                  <strong>Note:</strong> This is a static portfolio demo. For immediate contact, please email me directly at{' '}
+                  <a href={`mailto:${contactData.email}`} className="underline font-medium">
+                    {contactData.email}
+                  </a>{' '}
+                  or connect on{' '}
+                  <a href={contactData.linkedin} target="_blank" rel="noopener noreferrer" className="underline font-medium">
+                    LinkedIn
+                  </a>.
+                </p>
+              </div>
 
               {isSubmitted && (
                 <div className="mb-8 p-4 bg-green-50 border border-green-200 rounded-xl flex items-center">
