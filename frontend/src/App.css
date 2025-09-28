@@ -1,34 +1,268 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Fashion Portfolio Design System - Sophisticated & Professional */
+
+/* Color Variables */
+:root {
+  /* Primary Colors - Sophisticated Fashion Palette */
+  --charcoal: #1a1a1a;           /* Deep charcoal for text and backgrounds */
+  --gold: #d4af37;               /* Elegant gold for accents */
+  --warm-white: #fafafa;         /* Warm white for light backgrounds */
+  --soft-gray: #f5f5f5;          /* Soft gray for subtle sections */
+  --medium-gray: #666666;        /* Medium gray for secondary text */
+  --light-gray: #e8e8e8;         /* Light gray for borders */
+  
+  /* Gradient Variables */
+  --gradient-primary: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  --gradient-gold: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+  --gradient-subtle: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Typography - Fashion Industry Standards */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--charcoal);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Headings - Sophisticated Fashion Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--charcoal);
 }
 
-.App-link {
-    color: #61dafb;
+/* Button Styles - Elegant & Professional */
+.btn-primary {
+  background: var(--gradient-gold);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 32px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  opacity: 0.95;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  border-radius: 50px;
+  padding: 14px 30px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  letter-spacing: 0.5px;
+}
+
+.btn-secondary:hover {
+  background: var(--gold);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* Card Styles - Fashion Portfolio Aesthetic */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styles - Professional Fashion Photography */
+.hero-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-image {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-image:hover {
+  transform: scale(1.05);
+}
+
+/* Color Classes */
+.text-charcoal { color: var(--charcoal); }
+.text-gold { color: var(--gold); }
+.text-medium-gray { color: var(--medium-gray); }
+.bg-charcoal { background-color: var(--charcoal); }
+.bg-gold { background-color: var(--gold); }
+.bg-warm-white { background-color: var(--warm-white); }
+.bg-soft-gray { background-color: var(--soft-gray); }
+
+/* Border Colors */
+.border-gold { border-color: var(--gold); }
+.border-light-gray { border-color: var(--light-gray); }
+
+/* Layout Utilities */
+.section-padding {
+  padding: 120px 0;
+}
+
+.container-max {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Animation Classes */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-animation {
+  animation-delay: var(--delay, 0ms);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus States - Accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Text Selection */
+::selection {
+  background: var(--gold);
+  color: white;
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Loading States */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Professional Spacing System */
+.space-xs { margin: 8px; }
+.space-sm { margin: 16px; }
+.space-md { margin: 24px; }
+.space-lg { margin: 32px; }
+.space-xl { margin: 48px; }
+.space-2xl { margin: 64px; }
+.space-3xl { margin: 96px; }
+
+/* Text Truncation */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Dark Theme Support */
+.dark .text-charcoal { color: var(--warm-white); }
+.dark .bg-white { background-color: var(--charcoal); }
+
+/* Print Styles */
+@media print {
+  .btn-primary, .btn-secondary {
+    background: transparent !important;
+    color: var(--charcoal) !important;
+    border: 1px solid var(--charcoal) !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --charcoal: #000000;
+    --gold: #ffbf00;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--soft-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8941f;
 }
