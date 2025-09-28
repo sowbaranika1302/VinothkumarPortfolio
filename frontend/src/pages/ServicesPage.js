@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Leaf, Brain, Users, TrendingUp, Award, Target } from 'lucide-react';
-import { portfolioData } from '../data/mock';
+import { portfolioAPI } from '../services/api';
 
 const ServicesPage = () => {
   const { services } = portfolioData;
