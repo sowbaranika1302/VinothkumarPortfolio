@@ -42,7 +42,7 @@ export const portfolioAPI = {
   // Projects
   getProjects: async (category = null) => {
     const params = category && category !== 'all' ? { category } : {};
-    return await apiClient.get('/projects', { params });
+    return await apiClient.get('/projects/', { params });
   },
 
   getProject: async (projectId) => {
@@ -51,37 +51,37 @@ export const portfolioAPI = {
 
   // About information
   getAboutInfo: async () => {
-    return await apiClient.get('/about');
+    return await apiClient.get('/about/');
   },
 
   // Research projects
   getResearchProjects: async () => {
-    return await apiClient.get('/research');
+    return await apiClient.get('/research/');
   },
 
   // Services
   getServices: async () => {
-    return await apiClient.get('/services');
+    return await apiClient.get('/services/');
   },
 
   // Testimonials
   getTestimonials: async () => {
-    return await apiClient.get('/testimonials');
+    return await apiClient.get('/testimonials/');
   },
 
   // Contact form submission
   submitContactForm: async (formData) => {
-    return await apiClient.post('/contact', formData);
+    return await apiClient.post('/contact/', formData);
   },
 
   // Submit testimonial
   submitTestimonial: async (testimonialData) => {
-    return await apiClient.post('/testimonials', testimonialData);
+    return await apiClient.post('/testimonials/', testimonialData);
   },
 
   // Health check
   healthCheck: async () => {
-    return await apiClient.get('/health');
+    return await apiClient.get('/health/');
   }
 };
 
