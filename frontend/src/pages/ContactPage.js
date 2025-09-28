@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, Calendar, Linkedin, ExternalLink } from 'lucide-react';
-import { portfolioAPI } from '../services/api';
 
 // Static contact data
 const contactData = {
