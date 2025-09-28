@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, Calendar, Linkedin, ExternalLink } from 'lucide-react';
-import { portfolioData } from '../data/mock';
+import { portfolioAPI } from '../services/api';
+
+// Static contact data
+const contactData = {
+  email: "contact@vinothkumar.com",
+  phone: "+1 (555) 123-4567", 
+  linkedin: "https://linkedin.com/in/vinoth-kumar-265ba8160/",
+  behance: "https://www.behance.net/vinoth93/projects",
+  location: "Kent, Ohio, USA"
+};
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
