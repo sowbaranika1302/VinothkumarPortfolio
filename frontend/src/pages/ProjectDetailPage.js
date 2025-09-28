@@ -284,7 +284,7 @@ const ProjectDetailPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {portfolioData.projects.slice(0, 3).filter(p => p.id !== parseInt(id)).map((relatedProject) => (
+            {relatedProjects.map((relatedProject) => (
               <Link 
                 key={relatedProject.id}
                 to={`/project/${relatedProject.id}`}
