@@ -22,19 +22,7 @@ const ProjectDetailPage = () => {
       </div>
     );
   }
-    ...project,
-    duration: project.duration || "6 months",
-    role: project.role || "Lead Designer",
-    challenge: project.challenge || "The main challenge was to balance sustainability goals with commercial viability while maintaining design excellence.",
-    solution: project.solution || "Implemented a comprehensive approach combining sustainable materials, innovative design processes, and stakeholder collaboration.",
-    results: project.results || [
-      "Significant positive impact achieved",
-      "Successfully met project objectives",
-      "Delivered measurable results",
-      "Gained valuable industry recognition"
-    ],
-    gallery: project.gallery || [project.image]
-  };
+  // Project already has all the required data from staticData
 
   return (
     <div className="min-h-screen pt-20">
