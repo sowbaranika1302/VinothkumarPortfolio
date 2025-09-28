@@ -53,33 +53,11 @@ const ContactPage = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    try {
-      await portfolioAPI.submitContactForm(formData);
-      
-      setIsSubmitted(true);
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        role: '',
-        service: '',
-        message: '',
-        timeline: ''
-      });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-      
-    } catch (error) {
-      console.error('Error submitting contact form:', error);
-      // You could add error state here to show error message to user
-      alert('There was an error submitting the form. Please try again.');
-    } finally {
+    // For static website, simulate form submission
+    setTimeout(() => {
       setIsSubmitting(false);
-    }
+      alert(`Thank you for your interest! Please contact me directly at ${contactData.email} or connect on LinkedIn for immediate response.`);
+    }, 1000);
   };
 
   const contactInfo = [
