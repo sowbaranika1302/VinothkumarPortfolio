@@ -84,12 +84,20 @@ logger = logging.getLogger(__name__)
 # Error handlers
 @app.exception_handler(404)
 async def not_found_handler(request, exc):
-    return {"success": False, "error": "Endpoint not found", "code": "NOT_FOUND"}
+    from fastapi.responses import JSONResponse
+    return JSONResponse(
+        status_code=404,
+        content={"success": False, "error": "Endpoint not found", "code": "NOT_FOUND"}
+    )
 
 @app.exception_handler(500)
 async def internal_error_handler(request, exc):
+    from fastapi.responses import JSONResponse
     logger.error(f"Internal server error: {exc}")
-    return {"success": False, "error": "Internal server error", "code": "INTERNAL_ERROR"}
+    return JSONResponse(
+        status_code=500,
+        content={"success": False, "error": "Internal server error", "code": "INTERNAL_ERROR"}
+    )
 
 if __name__ == "__main__":
     import uvicorn
