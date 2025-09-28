@@ -4,11 +4,11 @@ import { portfolioAPI } from '../services/api';
 
 // Static contact data
 const contactData = {
-  email: "contact@vinothkumar.com",
+  email: "vinothk.g93@gmail.com",
   phone: "+1 (555) 123-4567", 
   linkedin: "https://linkedin.com/in/vinoth-kumar-265ba8160/",
   behance: "https://www.behance.net/vinoth93/projects",
-  location: "Kent, Ohio, USA"
+  location: "Lubbock, TX, USA"
 };
 
 const ContactPage = () => {
