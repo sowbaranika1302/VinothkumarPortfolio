@@ -5,9 +5,68 @@ import { portfolioAPI } from '../services/api';
 
 const ProjectDetailPage = () => {
   const { id } = useParams();
-  
-  // Find project by id (for now using mock data)
-  const project = portfolioData.projects.find(p => p.id === parseInt(id)) || {
+  const [project, setProject] = useState(null);
+  const [relatedProjects, setRelatedProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchProjectData = async () => {
+      try {
+        setLoading(true);
+        const [projectData, allProjects] = await Promise.all([
+          portfolioAPI.getProject(id),
+          portfolioAPI.getProjects()
+        ]);
+        
+        setProject(projectData.project);
+        // Get 3 related projects (excluding current one)
+        const related = allProjects.projects
+          ?.filter(p => p.id !== id)
+          .slice(0, 3) || [];
+        setRelatedProjects(related);
+        setError(null);
+      } catch (err) {
+        console.error('Error fetching project:', err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (id) {
+      fetchProjectData();
+    }
+  }, [id]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen pt-20 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gold mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading project...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error || !project) {
+    return (
+      <div className="min-h-screen pt-20 flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-red-600 mb-4">
+            {error || 'Project not found'}
+          </p>
+          <Link to="/portfolio" className="btn-primary">
+            Back to Portfolio
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  // Fallback project structure if data is incomplete
+  const projectWithDefaults = {
     id: parseInt(id),
     title: "Project Title",
     category: "Collections",
