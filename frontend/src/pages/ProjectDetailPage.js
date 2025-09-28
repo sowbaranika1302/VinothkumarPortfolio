@@ -67,30 +67,18 @@ const ProjectDetailPage = () => {
 
   // Fallback project structure if data is incomplete
   const projectWithDefaults = {
-    id: parseInt(id),
-    title: "Project Title",
-    category: "Collections",
-    company: "Company Name",
-    image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=600&fit=crop",
-    description: "Detailed project description goes here. This is a comprehensive overview of the project scope, objectives, and outcomes.",
-    tools: ["Tool 1", "Tool 2", "Tool 3"],
-    impact: "Significant positive impact achieved through this project.",
-    duration: "6 months",
-    role: "Lead Designer & Project Manager",
-    challenge: "The main challenge was to balance sustainability goals with commercial viability while maintaining design excellence.",
-    solution: "Implemented a comprehensive approach combining sustainable materials, innovative design processes, and stakeholder collaboration.",
-    results: [
-      "30% reduction in environmental impact",
-      "25% increase in customer satisfaction",
-      "Successful launch across 50+ retail locations",
-      "Award recognition for sustainability innovation"
+    ...project,
+    duration: project.duration || "6 months",
+    role: project.role || "Lead Designer",
+    challenge: project.challenge || "The main challenge was to balance sustainability goals with commercial viability while maintaining design excellence.",
+    solution: project.solution || "Implemented a comprehensive approach combining sustainable materials, innovative design processes, and stakeholder collaboration.",
+    results: project.results || [
+      "Significant positive impact achieved",
+      "Successfully met project objectives",
+      "Delivered measurable results",
+      "Gained valuable industry recognition"
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=600&fit=crop"
-    ]
+    gallery: project.gallery || [project.image]
   };
 
   return (
