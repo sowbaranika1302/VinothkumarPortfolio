@@ -189,7 +189,7 @@ class PortfolioAPITester:
         }
         
         try:
-            response = self.session.post(f"{self.base_url}/contact", json=invalid_contact_data)
+            response = self.session.post(f"{self.base_url}/contact/", json=invalid_contact_data)
             if response.status_code == 422:  # Validation error expected
                 self.log_test("POST /api/contact - Invalid email validation", True, 
                             "Correctly rejected invalid email format")
