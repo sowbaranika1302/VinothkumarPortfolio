@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ExternalLink, Users, Award, BookOpen, Microscope, Lightbulb, TrendingUp } from 'lucide-react';
-import { portfolioAPI } from '../services/api';
+import { staticPortfolioData } from '../data/staticData';
 
 const ResearchPage = () => {
   const [research, setResearch] = useState([]);
