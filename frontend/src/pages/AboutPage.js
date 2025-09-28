@@ -168,7 +168,7 @@ const AboutPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {aboutData.credentials.map((credential, index) => (
+            {about.credentials.map((credential, index) => (
               <div key={index} className="flex items-start p-6 bg-gray-50 rounded-2xl hover:bg-gold/10 transition-colors duration-300">
                 <div className="w-3 h-3 bg-gold rounded-full mt-2 mr-4 flex-shrink-0"></div>
                 <p className="text-gray-700 leading-relaxed">{credential}</p>
