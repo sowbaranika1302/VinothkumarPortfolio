@@ -87,19 +87,19 @@ const ContactPage = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: portfolioData.contact.email,
-      link: `mailto:${portfolioData.contact.email}`
+      value: contactData.email,
+      link: `mailto:${contactData.email}`
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: portfolioData.contact.phone,
-      link: `tel:${portfolioData.contact.phone}`
+      value: contactData.phone,
+      link: `tel:${contactData.phone}`
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: portfolioData.contact.location,
+      value: contactData.location,
       link: null
     }
   ];
@@ -108,13 +108,13 @@ const ContactPage = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      url: portfolioData.contact.linkedin,
+      url: contactData.linkedin,
       description: 'Connect professionally'
     },
     {
       icon: ExternalLink,
       label: 'Behance',
-      url: portfolioData.contact.behance,
+      url: contactData.behance,
       description: 'View creative portfolio'
     }
   ];
