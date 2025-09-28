@@ -245,7 +245,7 @@ const AboutPage = () => {
               Start Collaboration
             </Link>
             <a 
-              href={portfolioData.contact.linkedin}
+              href="https://linkedin.com/in/vinoth-kumar-265ba8160/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary inline-flex items-center"
