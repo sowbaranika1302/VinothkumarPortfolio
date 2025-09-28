@@ -1,23 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Filter, ExternalLink } from 'lucide-react';
-import { portfolioAPI } from '../services/api';
-
-// Categories definition (moved from mock data)
-const categories = [
-  { id: "all", label: "All Projects" },
-  { id: "collections", label: "Collections" },
-  { id: "3d-design", label: "3D Design" },
-  { id: "research", label: "Research" },
-  { id: "styling", label: "Styling" },
-  { id: "accessories", label: "Accessories" },
-  { id: "surface-development", label: "Surface Development" }
-];
-
-// Contact info for portfolio CTA
-const portfolioContact = {
-  behance: "https://www.behance.net/vinoth93/projects"
-};
+import { staticPortfolioData, categories } from '../data/staticData';
 
 const PortfolioPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
