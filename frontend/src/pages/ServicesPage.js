@@ -4,7 +4,27 @@ import { CheckCircle, ArrowRight, Leaf, Brain, Users, TrendingUp, Award, Target 
 import { portfolioAPI } from '../services/api';
 
 const ServicesPage = () => {
-  const { services } = portfolioData;
+  const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchServicesData = async () => {
+      try {
+        setLoading(true);
+        const data = await portfolioAPI.getServices();
+        setServices(data.services || []);
+        setError(null);
+      } catch (err) {
+        console.error('Error fetching services data:', err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchServicesData();
+  }, []);
 
   const processSteps = [
     {
