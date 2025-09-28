@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Linkedin, ExternalLink, Mail, MapPin } from 'lucide-react';
-import { portfolioData } from '../data/mock';
 
 const Footer = () => {
   return (
