@@ -164,7 +164,7 @@ class PortfolioAPITester:
         }
         
         try:
-            response = self.session.post(f"{self.base_url}/contact", json=contact_data)
+            response = self.session.post(f"{self.base_url}/contact/", json=contact_data)
             if response.status_code == 200:
                 data = response.json()
                 if data.get("success") and "submission_id" in data.get("data", {}):
