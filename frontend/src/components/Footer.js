@@ -69,7 +69,7 @@ const Footer = () => {
           
           <div className="flex space-x-6">
             <a
-              href={portfolioData.contact.linkedin}
+              href="https://linkedin.com/in/vinoth-kumar-265ba8160/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gold transition-colors"
@@ -79,7 +79,7 @@ const Footer = () => {
             </a>
             
             <a
-              href={portfolioData.contact.behance}
+              href="https://www.behance.net/vinoth93/projects"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gold transition-colors"
