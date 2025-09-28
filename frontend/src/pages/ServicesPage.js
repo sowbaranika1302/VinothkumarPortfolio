@@ -174,6 +174,7 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
+      )}
 
       {/* Expertise Areas */}
       <section className="py-20 bg-gray-50">
