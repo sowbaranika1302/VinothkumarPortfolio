@@ -269,7 +269,7 @@ const PortfolioPage = () => {
               Start a Project
             </Link>
             <a 
-              href={portfolioData.contact.behance}
+              href={portfolioContact.behance}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary inline-flex items-center"
