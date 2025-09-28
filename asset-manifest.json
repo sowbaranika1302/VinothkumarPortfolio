@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/VinothkumarPortfolio/static/css/main.1e836733.css",
+    "main.js": "/VinothkumarPortfolio/static/js/main.21448bfb.js",
+    "index.html": "/VinothkumarPortfolio/index.html",
+    "main.1e836733.css.map": "/VinothkumarPortfolio/static/css/main.1e836733.css.map",
+    "main.21448bfb.js.map": "/VinothkumarPortfolio/static/js/main.21448bfb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e836733.css",
+    "static/js/main.21448bfb.js"
+  ]
+}
