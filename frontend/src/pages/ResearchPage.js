@@ -345,6 +345,7 @@ const ResearchPage = () => {
           </div>
         </div>
       </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
