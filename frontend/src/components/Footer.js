@@ -18,16 +18,16 @@ const Footer = () => {
             
             <div className="space-y-3">
               <a 
-                href={`mailto:${portfolioData.contact.email}`}
+                href="mailto:vinothk.g93@gmail.com"
                 className="flex items-center text-gray-300 hover:text-gold transition-colors"
               >
                 <Mail size={18} className="mr-3" />
-                {portfolioData.contact.email}
+                vinothk.g93@gmail.com
               </a>
               
               <div className="flex items-center text-gray-300">
                 <MapPin size={18} className="mr-3" />
-                {portfolioData.contact.location}
+                Lubbock, TX, USA
               </div>
             </div>
           </div>
