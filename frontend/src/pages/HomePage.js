@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Award, Zap } from 'lucide-react';
-import { portfolioAPI } from '../services/api';
+import { staticPortfolioData } from '../data/staticData';
 
 const HomePage = () => {
   const [projects, setProjects] = useState([]);
