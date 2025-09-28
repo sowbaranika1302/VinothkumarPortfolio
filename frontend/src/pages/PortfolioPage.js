@@ -22,42 +22,67 @@ const portfolioContact = {
 const PortfolioPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [allProjects, setAllProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Generate additional projects to reach 23 total
-  const allProjects = [
-    ...portfolioData.projects,
-    // Additional projects to reach 23
-    ...Array.from({ length: 18 }, (_, i) => ({
-      id: portfolioData.projects.length + i + 1,
-      title: [
-        "Circular Fashion Strategy", "Smart Textile Development", "Sustainable Denim Line",
-        "AI-Powered Design Tools", "Eco-Friendly Accessories", "Zero-Waste Pattern Making",
-        "Digital Fashion Showroom", "Organic Cotton Collection", "Recycled Material Innovation",
-        "Fashion Tech Integration", "Sustainable Supply Chain", "Ethical Production Methods",
-        "Climate-Conscious Design", "Biomaterial Research", "Fashion Sustainability Audit",
-        "Upcycling Innovation", "Green Manufacturing", "Conscious Consumer Education"
-      ][i],
-      category: ['Collections', '3D Design', 'Research', 'Styling', 'Accessories', 'Surface Development'][Math.floor(Math.random() * 6)],
-      company: ['Independent', 'Lulu Group', 'Kent State', 'Mad Street Den', 'Collaboration'][Math.floor(Math.random() * 5)],
-      image: [
-        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&h=600&fit=crop"
-      ][Math.floor(Math.random() * 6)],
-      description: "Innovative approach to sustainable fashion design and implementation.",
-      tools: ["Design Thinking", "Sustainability", "Innovation"],
-      impact: "Positive environmental and social impact achieved."
-    }))
-  ];
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        setLoading(true);
+        const projectsData = await portfolioAPI.getProjects(selectedCategory);
+        setAllProjects(projectsData.projects || []);
+        setError(null);
+      } catch (err) {
+        console.error('Error fetching projects:', err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const filteredProjects = selectedCategory === 'all' 
-    ? allProjects 
-    : allProjects.filter(project => 
-        project.category.toLowerCase().replace(' ', '-') === selectedCategory
-      );
+    fetchProjects();
+  }, [selectedCategory]);
+
+  const filteredProjects = allProjects;
+
+  if (loading) {
+    return (
+      <div className="min-h-screen pt-20">
+        {/* Header */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-6">
+              My <span className="text-gold">Portfolio</span>
+            </h1>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gold mx-auto mb-4"></div>
+            <p className="text-gray-600">Loading projects...</p>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen pt-20">
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-6">
+              My <span className="text-gold">Portfolio</span>
+            </h1>
+            <p className="text-red-600 mb-4">Error loading projects: {error}</p>
+            <button 
+              onClick={() => window.location.reload()}
+              className="btn-primary"
+            >
+              Try Again
+            </button>
+          </div>
+        </section>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen pt-20">
