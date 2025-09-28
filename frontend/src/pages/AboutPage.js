@@ -128,7 +128,7 @@ const AboutPage = () => {
           </div>
 
           <div className="space-y-8">
-            {aboutData.experience.map((exp, index) => (
+            {about.experience.map((exp, index) => (
               <div key={index} className="relative flex items-start">
                 {/* Timeline Line */}
                 <div className="flex-shrink-0 w-12 h-12 bg-gold rounded-full flex items-center justify-center text-charcoal font-bold mr-6">
