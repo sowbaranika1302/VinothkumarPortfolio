@@ -54,9 +54,9 @@ const ContactPage = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      await portfolioAPI.submitContactForm(formData);
+      
       setIsSubmitted(true);
       // Reset form
       setFormData({
@@ -73,7 +73,14 @@ const ContactPage = () => {
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
-    }, 2000);
+      
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
+      // You could add error state here to show error message to user
+      alert('There was an error submitting the form. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
